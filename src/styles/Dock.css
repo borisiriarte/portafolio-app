@@ -1,0 +1,118 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+
+#square-b,
+#logo-b,
+#lang-b {
+  display: block;
+}
+
+#header-navbar {
+  position: fixed;
+  padding: 0.5rem 0;
+  height: 100%;
+  width: 10vw;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-rows: 1fr 80vh 1fr;
+  place-content: center;
+  border-right: 2px solid var(--primary-color-op8);
+  color: var(--tertiary-color-op5);
+  z-index: 3;
+}
+
+
+.icons {
+  font-size: var(--fourth-font-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: border-color 1s ease;
+}
+
+.icon {
+  color: var(--tertiary-color-op4);
+  transition: transform 0.2s linear,
+    color 1s ease;
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: scale(1.3);
+  color: var(--primary-color);
+}
+
+.icons p {
+  color: var(--primary-color-op8);
+  font-size: var(--fifth-font-size);
+}
+
+.icon:hover p {
+  margin-top: 0.2rem;
+  display: block;
+  color: var(--secondary-color-op5);
+}
+
+.icons:hover :not(p, i, :hover) {
+  color: var(--secondary-color-op1);
+}
+
+@keyframes slide {
+  from {
+    bottom: -8rem;
+  }
+
+  to {
+    bottom: 1.2rem;
+  }
+}
+
+@media (max-width: 720px) {
+
+  #square-b,
+  #logo-b,
+  #lang-b {
+    display: none;
+  }
+
+  #header-navbar {
+    background: var(--primary-color-op8);
+    top: unset;
+    bottom: 0;
+    height: 3.5rem;
+    width: 100%;
+    grid-template-rows: unset;
+    border-right: unset;
+    border-top: 1.5px solid var(--tertiary-color-op4);
+  }
+
+  .icons {
+    height: 100%;
+    width: 100vw;
+    flex-direction: row;
+  }
+
+  .icon {
+    color: var(--primary-color-mobile-op8);
+  }
+
+  .icon:hover {
+    transform: scale(1.2);
+    color: var(--primary-color-mobile);
+  }
+
+  .icons p {
+    display: none;
+  }
+
+  .icon:hover p {
+    margin-top: unset;
+    color: var(--primary-color-mobile);
+  }
+
+  .icons:hover :not(p, i, :hover) {
+    color: var(--primary-color-mobile-op5);
+  }
+
+}

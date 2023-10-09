@@ -1,0 +1,17 @@
+.error-container {
+  height: 100vh;
+}
+
+#e-404 {
+  font-family: 'Simplifica';
+  font-size: clamp(5rem, -8.2353rem + 44.1176vw, 20rem);
+  color: var(--primary-color);
+  line-height: normal;
+}
+
+#e-message {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: clamp(1rem, -0.7647rem + 5.8824vw, 3rem);
+  color: var(--secondary-color-op5);
+  line-height: 0;
+}

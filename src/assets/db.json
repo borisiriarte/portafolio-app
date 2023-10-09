@@ -1,0 +1,16 @@
+[
+  {
+    "id": 0,
+    "language": "ES",
+    "secondaryTitle": "Desarrollador Full-Stack",
+    "icons": ["inicio", "acerca", "projectos", "contacto"],
+    "aboutParaghraph": "Desarrollador autodidacta con mayor inclinacion hacia el frond end que al back end.<br><br />Es asombroso cuanto puedes aprender y logara si pones todo tu esfuezo. Fue en 2022 que decidi sumergirme en este mundo y no tengo remordimientos. <br /><br />Tan solo espero que puedan ver cuan lejos puedo llegar."
+  },
+  {
+    "id": 1,
+    "language": "EN",
+    "secondaryTitle": "Full-Stack Developer",
+    "icons": ["home", "about", "projects", "contact"],
+    "aboutParaghraph": "Self-taught developer with more inclination towards front end than back end.<br><br />It's amazing how much you can learn and accomplish if you put your mind to it. It was in 2022 that I decided to dive into this world and I have no regrets.<br /><br />I just hope you can see how far I can go."
+  }
+]

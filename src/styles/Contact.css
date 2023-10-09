@@ -1,0 +1,51 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+
+.contact-container {
+  height: 100vh;
+  font-size: clamp(4rem, 0.2941rem + 7.3529vw, 6rem);
+  font-family: 'Simplifica';
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.contact-container i {
+  color: var(--secondary-color);
+}
+
+.contact-container i {
+  position: relative;
+  transition: font-size 0.2s linear;
+}
+
+.contact-container i:hover {
+  font-size: clamp(5rem, 0.4706rem + 11.7647vw, 8rem);
+  color: var(--primary-color);
+}
+
+.contact-container i::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 60%;
+  left: 80%;
+  transform: translate(-50%, 90%);
+  text-align: center;
+  background-color: var(--primary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.2rem;
+  font-size: clamp(1rem, 0.1176rem + 2.9412vw, 2rem);
+  letter-spacing: 0.05rem;
+  opacity: 0;
+
+}
+
+.contact-container i:hover::after {
+  opacity: 1;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 800px) {
+  .contact-container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4rem;
+  }
+}

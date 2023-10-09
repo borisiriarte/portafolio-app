@@ -1,0 +1,79 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+
+header {
+  display: none;
+  z-index: 3;
+}
+
+.square {
+  position: relative;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: solid 1.5px var(--primary-color-op8);
+  border-radius: 0.3rem;
+}
+
+.logo {
+  position: absolute;
+  top: -0.25rem;
+  left: 0.1rem;
+  font-family: 'SkyHook Mono';
+  font-size: var(--third-font-size);
+  color: var(--primary-color-op8);
+}
+
+.lang {
+  font-size: var(--fourth-font-size);
+  color: var(--tertiary-color-op4);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lang h2 {
+  font-size: var(--fourth-font-size);
+  color: var(--primary-color-op8);
+  pointer-events: none;
+}
+
+.lang h2,
+.lang .ico {
+  pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  header {
+    display: block;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .square {
+    width: 2rem;
+    height: 2rem;
+    border: solid 1.5px var(--primary-color-op8);
+    border-radius: 0.2rem;
+  }
+
+  .logo {
+    top: -0.2rem;
+  }
+
+  .lang h2 {
+    margin-left: 0.3rem;
+  }
+
+  .icons {
+    height: 100%;
+    width: 100vw;
+    flex-direction: row;
+  }
+}

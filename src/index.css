@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "Simplifica";
+  src: url("src/assets/fonts/SIMPLIFICA Typeface.ttf");
+}
+
+:root {
+  --background-color: linear-gradient(135deg, rgb(3, 25, 41) 0%, rgba(25, 56, 94, 0.3) 90%),
+    linear-gradient(-135deg, rgb(3, 25, 41) 0%, rgba(25, 56, 94, 0.3) 90%),
+    url(https://grainy-gradients.vercel.app/noise.svg),
+    linear-gradient(360deg, rgb(247, 109, 67) 0%, rgb(31, 74, 105) 50%);
+  ;
+  --main-font-size: clamp(6.854rem, 3.1172rem + 12.4559vw, 11.089rem);
+  --main-font-size-h2: clamp(4.236rem, 1.926rem + 7.7vw, 6.854rem);
+
+  --secondary-font-size: clamp(2.618rem, 1.1904rem + 4.7588vw, 4.236rem);
+  --third-font-size: clamp(1.618rem, 0.7356rem + 2.9412vw, 2.618rem);
+  --fourth-font-size: clamp(1rem, 0.4547rem + 1.8176vw, 1.618rem);
+
+  --fifth-font-size: clamp(0.8rem, 0.4471rem + 1.1765vw, 1.2rem);
+
+  --letter-spacing: clamp(0.236rem, 0.1072rem + 0.4294vw, 0.382rem);
+
+
+  --primary-color: rgb(180, 136, 55);
+  --primary-color-op8: rgba(180, 136, 55, 0.6);
+  --secondary-color: rgb(245, 222, 179);
+  --secondary-color-op5: rgba(245, 222, 179, 0.5);
+  --secondary-color-op3: rgba(245, 222, 179, 0.3);
+  --secondary-color-op1: rgba(245, 222, 179, 0.1);
+  --tertiary-color: rgb(240, 248, 255);
+  --tertiary-color-op5: rgba(240, 248, 255, 0.5);
+  --tertiary-color-op4: rgba(240, 248, 255, 0.4);
+
+  --primary-color-mobile: rgb(3, 25, 41);
+  --primary-color-mobile-op8: rgba(3, 25, 41, 0.8);
+  --primary-color-mobile-op5: rgba(3, 25, 41, 0.5);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Simplifica";
+  text-align: center;
+  min-height: 100vh;
+  box-sizing: inherit;
+  min-width: 250px;
+  background: var(--background-color);
+  background-attachment: fixed;
+}
+
+.last-letter {
+  letter-spacing: normal;
+}
+
+/* Container of all the pages */
+.container {
+  position: absolute;
+  margin-left: 10vw;
+  width: 90vw;
+  display: grid;
+  place-content: center;
+  z-index: 2;
+}
+
+@media (max-width: 720px) {
+  .container {
+    margin-left: unset;
+    width: 100%;
+  }
+}
+
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient(135deg, rgb(3, 25, 41) 0%, rgba(25, 56, 94, 0.5) 90%),
+    linear-gradient(-135deg, rgb(3, 25, 41) 0%, rgba(25, 56, 94, 0.5) 90%),
+    url(https://grainy-gradients.vercel.app/noise.svg),
+    linear-gradient(360deg, rgba(247, 109, 67, 0.7) 0%, rgba(31, 74, 105, 0.7) 30%);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--primary-color-op8);
+  border-radius: 20px;
+}

@@ -1,0 +1,31 @@
+.home-container {
+  height: 100vh;
+}
+
+#main-title {
+  line-height: 0.8;
+  margin: 0 2rem;
+  color: var(--primary-color);
+  font-size: var(--main-font-size);
+  letter-spacing: var(--letter-spacing);
+  overflow-wrap: break-word;
+  pointer-events: none;
+}
+
+#secondary-title {
+  line-height: 1;
+  margin: 0 2rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--secondary-color-op5);
+  font-size: var(--secondary-font-size);
+  overflow-wrap: break-word;
+  pointer-events: none;
+}
+
+@media (max-width:720px) {
+
+  #main-title,
+  #secondary-title {
+    margin: 0 0.4rem;
+  }
+}
