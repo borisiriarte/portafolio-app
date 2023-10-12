@@ -1,9 +1,19 @@
 import React from "react";
 import "../styles/Contact.css";
+import { motion } from "framer-motion";
 
 function Contact() {
   return (
-    <div className="contact-container container">
+    <motion.div
+      className="contact-container container"
+      initial={{ opacity: 0, filter: "blur(50px)" }}
+      animate={{
+        opacity: 1,
+        filter: "blur(0px)",
+      }}
+      exit={{ opacity: 0, filter: "blur(50px)" }}
+      transition={{ duration: 0.5 }}
+    >
       <a href="">
         <i
           className="fi fi-sr-at gmail"
@@ -22,7 +32,7 @@ function Contact() {
           data-text="Messenger"
         ></i>
       </a>
-    </div>
+    </motion.div>
   );
 }
 

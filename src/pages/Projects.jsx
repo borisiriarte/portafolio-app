@@ -51,6 +51,7 @@ function Projects() {
           <div className="description">Tools</div>
         </div>
       </div>
+      <div className="pic-container space"></div>
     </div>
   );
 }

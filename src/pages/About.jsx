@@ -1,11 +1,21 @@
 import React, { useContext } from "react";
 import "../styles/About.css";
 import LanguageContext from "../Context/LanguageContext";
+import { motion } from "framer-motion";
 
 function About() {
   const { texts } = useContext(LanguageContext);
   return (
-    <div className="about-container container">
+    <motion.div
+      className="about-container container"
+      initial={{ opacity: 0, filter: "blur(50px)" }}
+      animate={{
+        opacity: 1,
+        filter: "blur(0px)",
+      }}
+      exit={{ opacity: 0, filter: "blur(50px)" }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="container-left">
         <p dangerouslySetInnerHTML={{ __html: texts.aboutParaghraph }}></p>
       </div>
@@ -28,7 +38,7 @@ function About() {
         <img src={"src/assets/icons/adobe-photoshop-logo.png"} alt="" />
         <img src={"src/assets/icons/illustrator.png"} alt="" />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

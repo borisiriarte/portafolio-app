@@ -12,6 +12,7 @@ header {
   height: 3.2rem;
   border: solid 1.5px var(--primary-color-op8);
   border-radius: 0.3rem;
+  transition: all 0.5s ease;
 }
 
 .logo {
@@ -23,13 +24,22 @@ header {
   color: var(--primary-color-op8);
 }
 
+.square:hover {
+  transform: scale(1.1);
+}
+
+.square:active {
+  border: solid 1.5px var(--primary-color);
+}
+
 .lang {
   font-size: var(--fourth-font-size);
   color: var(--tertiary-color-op4);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: all 0.4s ease;
 }
 
 .lang h2 {
@@ -41,6 +51,15 @@ header {
 .lang h2,
 .lang .ico {
   pointer-events: none;
+}
+
+.lang:hover {
+  color: var(--primary-color-op8);
+  transform: scale(1.1);
+}
+
+.lang:active {
+  color: var(--primary-color);
 }
 
 @media (max-width: 720px) {
